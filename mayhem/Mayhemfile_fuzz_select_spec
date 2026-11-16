@@ -1,0 +1,10 @@
+project: savantenvs/openpbs
+target: fuzz_select_spec
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_select_spec/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_select_spec
+    libfuzzer: true
+    timeout: 30
+    dictionary: /mayhem/mayhem/fuzz_select_spec/fuzz_select_spec.dict

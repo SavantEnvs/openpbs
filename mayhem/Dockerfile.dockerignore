@@ -1,0 +1,12 @@
+# Keep the full repo (including .git) in the context; drop only local build outputs and editor cruft.
+build/
+out/
+mayhem/build-fuzz/
+mayhem/build-test/
+*.o
+*.a
+*.so
+**/__pycache__/
+.DS_Store
+*.swp
+*~

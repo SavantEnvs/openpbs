@@ -1,0 +1,10 @@
+project: savantenvs/openpbs
+target: fuzz_execvnode_seq
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_execvnode_seq/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_execvnode_seq
+    libfuzzer: true
+    timeout: 30
+    dictionary: /mayhem/mayhem/fuzz_execvnode_seq/fuzz_execvnode_seq.dict
